@@ -1,0 +1,48 @@
+@import "../../vars";
+
+.guest-house {
+
+    &__title {
+        text-align: center;
+        margin-bottom: 110px;
+        color: $accent-color;
+        font-size: 96px;
+        line-height: 96px;
+        padding-top: 30px;
+    }
+
+    &__img-container {
+        margin: 0 auto;
+    }
+
+    &__img {
+        max-width: 100%;
+        width: 100%;
+        max-height: 660px;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .guest-house__img-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .guest-house__title {
+        margin-bottom: 80px;
+        font-size: 65px;
+        line-height: 76px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .guest-house__title {
+        margin-bottom: 80px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+}

@@ -1,0 +1,88 @@
+@import "vars";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 400;
+    color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+  }
+
+
+button {
+  color: inherit;
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.button {
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 11px 18px;
+    text-align: center;
+    font-weight: 400;
+    transition: all 0.4s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+}
+
+
+.line {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 8px;
+    background: $line-color;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.react-rater {
+  margin-bottom: 10px;
+}
+
+.react-rater-star {
+  padding: 0 2px;
+}
+
+.react-rater-star.is-active {
+  color: #E08631;
+}

@@ -1,0 +1,95 @@
+@import '../../vars.scss';
+
+.reviews {
+    padding: 100px 0 150px 0;
+    background: $background;
+
+    &__slider {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        max-width: 1800%;
+        width: 100%;
+        padding-left: 50px;
+        margin: 0 auto;
+        position: relative;
+
+        &-container {
+            display: flex;
+            flex-direction: row;
+            width: max-content;
+            overflow-x: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &-card {
+            position: relative;
+            min-width: 520px;
+            height: 100%;
+            margin-right: 2rem; 
+            background-color: #fff;
+            padding: 33px 31px;
+            border-radius: 4px;
+            border: 1px solid rgba(82, 80, 59, 0.1);
+
+            &_title {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 11px;
+            }
+
+            &_text {
+                margin-bottom: 19px;
+            }
+
+            &_author {
+                position: relative;
+                padding-left: 12px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 2px;
+                    height: 20px;
+                    left: 0;
+                    background-color: $line-color; 
+                }
+            }
+        }
+
+        &-arrows {
+            width: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            position: absolute;
+            bottom: -80px;
+            right: 10%;
+        }
+
+        &-arrow {
+            border: 2px solid #fff;
+            border-radius: 30px;
+            color: #AC8F78;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .reviews__slider {
+        padding-left: 20px;
+    }
+    
+    .reviews__slider-card {
+        padding: 20px;
+        min-width: 400px;
+    }
+}

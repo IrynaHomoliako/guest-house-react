@@ -1,0 +1,25 @@
+@import "../../vars";
+
+.book-now {
+    padding: 100px 0;
+    background-color: $background;
+    
+    &__buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-display: row;
+    }
+
+    &__button-contact.button {
+        border: 2px solid $accent-color;
+        color: $accent-color;
+        background: $background;
+        margin-right: 20px;
+    }
+
+    &__button-book {
+        color: #fff;
+        background: $accent-color;
+    }
+}
